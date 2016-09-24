@@ -1,0 +1,20 @@
+include ':ClickCounter'
+project(':ClickCounter').projectDir = new File('android/ClickCounter')
+
+include ':HelloAndroid'
+project(':HelloAndroid').projectDir = new File('android/HelloAndroid')
+
+include ':HelloAndroidH2'
+project(':HelloAndroidH2').projectDir = new File('android/HelloAndroidH2')
+
+include ':HelloAndroidNoBase'
+project(':HelloAndroidNoBase').projectDir = new File('android/HelloAndroidNoBase')
+
+include ':HelloAndroidNoHelper'
+project(':HelloAndroidNoHelper').projectDir = new File('android/HelloAndroidNoHelper')
+
+include ':HelloAndroidTwoDbs'
+project(':HelloAndroidTwoDbs').projectDir = new File('android/HelloAndroidTwoDbs')
+
+include ':NotifyService'
+project(':NotifyService').projectDir = new File('android/NotifyService')
