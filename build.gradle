@@ -20,3 +20,24 @@ ext {
     compileSdkVersion = 23
     minSdkVersion = 14
 }
+
+subprojects {
+    project.plugins.whenPluginAdded { plugin ->
+        if ('com.android.build.gradle.AppPlugin'.equals(plugin.class.name)) {
+
+            def sourceSets = project.android.&sourceSets
+
+            sourceSets {
+                project.android.sourceSets.main {
+                    project.android.sourceSets.main.manifest.srcFile 'AndroidManifest.xml'
+                    project.android.sourceSets.main.java.srcDirs = ['src']
+                    project.android.sourceSets.main.resources.srcDirs = ['src']
+                    project.android.sourceSets.main.aidl.srcDirs = ['src']
+                    project.android.sourceSets.main.renderscript.srcDirs = ['src']
+                    project.android.sourceSets.main.res.srcDirs = ['res']
+                    project.android.sourceSets.main.assets.srcDirs = ['assets']
+                }
+            }
+        }
+    }
+}
