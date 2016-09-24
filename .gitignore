@@ -27,3 +27,6 @@ out/
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Local files
+local.properties
