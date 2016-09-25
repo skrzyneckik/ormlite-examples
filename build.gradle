@@ -21,6 +21,15 @@ ext {
     minSdkVersion = 14
 }
 
+def ormLiteLibsVersion = '4.43'
+
+ext.libraries = [
+        ormLiteCore             : 'com.j256.ormlite:ormlite-core:' + ormLiteLibsVersion,
+        ormLiteAndroid          : 'com.j256.ormlite:ormlite-android:' + ormLiteLibsVersion,
+        ormLiteJdbc             : 'com.j256.ormlite:ormlite-jdbc:' + ormLiteLibsVersion,
+        h2Database              : 'com.h2database:h2:1.2.128'
+]
+
 subprojects {
     project.plugins.whenPluginAdded { plugin ->
         if ('com.android.build.gradle.AppPlugin'.equals(plugin.class.name)) {

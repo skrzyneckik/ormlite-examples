@@ -14,6 +14,6 @@ android {
 }
 
 dependencies {
-    compile 'com.j256.ormlite:ormlite-core:4.43'
-    compile 'com.j256.ormlite:ormlite-android:4.43'
+    compile libraries.ormLiteCore
+    compile libraries.ormLiteAndroid
 }

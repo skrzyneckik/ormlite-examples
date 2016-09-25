@@ -14,8 +14,8 @@ android {
 }
 
 dependencies {
-    compile 'com.j256.ormlite:ormlite-core:4.43'
-    compile 'com.j256.ormlite:ormlite-android:4.43'
-    compile 'com.j256.ormlite:ormlite-jdbc:4.43'
-    compile 'com.h2database:h2:1.2.128'
+    compile libraries.ormLiteCore
+    compile libraries.ormLiteAndroid
+    compile libraries.ormLiteJdbc
+    compile libraries.h2Database
 }
