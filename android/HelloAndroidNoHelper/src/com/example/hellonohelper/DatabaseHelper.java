@@ -42,7 +42,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	 */
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		DatabaseConnection conn = connectionSource.getSpecialConnection();
+		DatabaseConnection conn = connectionSource.getSpecialConnection("");
 		boolean clearSpecial = false;
 		if (conn == null) {
 			conn = new AndroidDatabaseConnection(db, true);
@@ -64,7 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 	@Override
 	public final void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		DatabaseConnection conn = connectionSource.getSpecialConnection();
+		DatabaseConnection conn = connectionSource.getSpecialConnection("");
 		boolean clearSpecial = false;
 		if (conn == null) {
 			conn = new AndroidDatabaseConnection(db, true);

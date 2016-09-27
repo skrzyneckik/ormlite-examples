@@ -21,7 +21,7 @@ ext {
     minSdkVersion = 14
 }
 
-def ormLiteLibsVersion = '4.43'
+def ormLiteLibsVersion = '5.0'
 
 ext.libraries = [
         ormLiteCore             : 'com.j256.ormlite:ormlite-core:' + ormLiteLibsVersion,
